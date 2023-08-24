@@ -84,7 +84,7 @@ public class ConnectPlatform {
             try {
                 Files.createDirectory(dataDirectory);
             } catch (IOException exception) {
-                logger.error("Failed to create the data folder", exception);
+                getLogger().info("Failed to create the data folder ", exception);
                 throw new RuntimeException("Failed to create the data folder", exception);
             }
         }
